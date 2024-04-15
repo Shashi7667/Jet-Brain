@@ -1,0 +1,228 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'JetBrains Sans', sans-serif;
+}
+
+.navbar-expand-lg {
+    background-color: #27282C !important;
+}
+
+.nav-link {
+    font-size: 22px;
+    margin-left: 10px;
+}
+
+.nav-link:hover {
+    color: #fff !important;
+}
+
+
+.input-box {
+    position: relative;
+    width: 100%;
+    max-width: 50px;
+    height: 50px;
+    margin-left: 20px;
+    background-color: #fff;
+    border-radius: 6px;
+    transition: all 0.5s ease-in-out;
+}
+
+.input-box.open {
+    max-width: 350px;
+}
+
+.input-box input {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+    padding: 0 15px;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.input-box.open input {
+    padding: 0 15px 0 65px;
+}
+
+.input-box .search {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.search .search-icon {
+    font-size: 30px;
+    color: #1c1c1c;
+}
+
+.input-box .close-icon {
+    position: absolute;
+    top: 50%;
+    right: -45px;
+    font-size: 30px;
+    color: #fff;
+    padding: 5px;
+    transform: translateY(-50%);
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.input-box.open .close-icon {
+    transform: translateY(-50%) rotate(180deg);
+    pointer-events: auto;
+    opacity: 1;
+}
+
+@media (max-width: 1200px) {
+    .icons {
+        display: none;
+    }
+}
+
+
+/* Start Header class */
+
+.header {
+    width: 100%;
+    background-color: #27282C;
+}
+
+@media (max-width: 1200px) {
+    .hide-on-1200 {
+        display: none;
+    }
+}
+
+/* Start Main-Header class */
+.main-header {
+    width: 100%;
+    position: relative;
+    background-color: #000;
+    overflow: hidden;
+}
+
+.image1 {
+    position: absolute;
+    right: -400px;
+    top: -650px;
+}
+
+.font-styles>h3 {
+    font-size: 60px;
+    font-weight: 500;
+}
+
+.font-styles>h2 {
+    font-size: 100px;
+    font-weight: 600;
+}
+
+.font-styles>h4 {
+    font-size: 50px;
+    font-weight: 500;
+}
+
+
+
+.video-content {
+    width: 100%;
+    background-color: #000;
+}
+
+.container1 {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.video-border {
+    border: solid 1px #4ca6ff;
+    border-radius: 30px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.buttons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+@media only screen and (max-width: 768px) {
+    .video-container {
+        padding: 0 10px;
+    }
+}
+
+
+/* Card text start */
+
+.card1 {
+    width: 100%;
+    background-color: #000;
+}
+
+.card2 {
+    background: hsl(0 0% 10%);
+    aspect-ratio: 4 / 3;
+    position: relative;
+    transition: background 0.1s;
+}
+
+.card2:hover {
+    --active: 1;
+}
+
+.card2:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at calc(var(--x) * 1px) calc(var(--y) * 1px), hsl(0 0% 100% / 0.15), transparent 15vmin);
+    background-attachment: fixed;
+    opacity: var(--active, 0);
+    transition: opacity 0.2s;
+    pointer-events: none;
+}
+
+.card2:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 302.75px 71.8625px, rgb(0, 104, 253) 0%, rgba(0, 104, 253, 0) calc(0% + 200px)) no-repeat border-box border-box rgba(0, 0, 0, 0);
+    
+    /* background:
+        radial-gradient(circle at calc(var(--x) * 1px) calc(var(--y) * 1px), hsl(0 0% 100% / 0.5), transparent 15vmin),
+        transparent; */
+    background-attachment: fixed;
+    pointer-events: none;
+    mask:
+        linear-gradient(white, white) 50% 0 / 100% 4px no-repeat,
+        linear-gradient(white, white) 50% 100% / 100% 4px no-repeat,
+        linear-gradient(white, white) 0 50% / 4px 100% no-repeat,
+        linear-gradient(white, white) 100% 50% / 4px 100% no-repeat;
+}
